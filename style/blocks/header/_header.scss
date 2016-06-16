@@ -1,0 +1,88 @@
+.header{
+    @include make-row();
+    position: relative;
+    margin-top: 6px;
+    height:100px;
+   
+    
+    &__logo {
+        height: 88px;
+        width: 93px;
+        @include make-xs-column(1);
+    }
+    &__nav {
+        @include make-xs-column(8);
+        display: block;
+        padding-left: 47px;
+        height: 100%;
+        .nav{
+            &.nav-tabs{
+                bottom: -25px;
+                position: relative;
+                display: block;
+                li{
+                    a{
+                        color: #696969;
+                        font: 400 16px PFBeauSansPro;
+                        text-transform: uppercase;
+                        padding-top: 24px;
+                        padding-bottom: 24px;
+                        padding-right: 24px;
+                        padding-left: 24px;
+                        &:hover{
+                            color: #ffffff;
+                                                        background: $blue;
+
+                        }
+                    }
+                    
+                    
+                    &.active {
+                        a{
+                            color: #ffffff;
+                            font: 600 16px PFBeauSansPro;
+                            background: $blue;
+                            padding: 24px 24px;
+                        }
+                    }
+                }
+            }
+        }     
+        .header__nav--geo{
+            margin-right: 4px;
+        }
+    }
+    &__phone{
+        @include make-xs-column(3);
+        text-align: right;
+        &--number{
+            @include make-row();
+            margin-bottom: 7px;
+            color: #000000;
+            font: 600 30px PFBeauSansPro;
+        }
+        &--label{
+            @include make-row();
+            color: #474747;
+            font: 500 14px HelveticaNeueCyr;
+        }
+        &--address{
+            @include make-row();
+            color: #a7a7a7;
+            margin-top: 10px;
+            font: 200 14px HelveticaNeueCyr;
+        }
+    }
+}
+.line{
+    
+        content: '';
+        background-color: $blue;
+        height: 15px;
+        position: absolute;
+        left: 0px;
+        top: 100px;
+        width: 100%;
+        box-shadow: 3px 4px 5px 0.00px rgba(0, 0, 0, 0.25);
+    
+}

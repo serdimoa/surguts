@@ -1,0 +1,9 @@
+@import 'bootstrap-variables';
+@import 'fonts';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'blocks/header/header';
+@import 'blocks/baner/baner';
+.container {
+    width: 1270px;
+    max-width: none !important;
+}

@@ -1,0 +1,5 @@
+.baner{
+    @include make-row();
+    height: 660px;
+    background: url(/images/background-1.png);
+}
