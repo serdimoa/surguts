@@ -18,12 +18,12 @@ gulp.task('sass', () => {
 });
 
 gulp.task('html', () => {
-  gulp.src('index.html')
+  gulp.src('*.html')
     .pipe(connect.reload());
 });
 
 gulp.task('watchhtml', () => {
-  gulp.watch('index.html', ['html']);
+  gulp.watch('*.html', ['html']);
 });
 
 gulp.task('watch', () => {

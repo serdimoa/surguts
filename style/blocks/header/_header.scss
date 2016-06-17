@@ -40,7 +40,7 @@
                     &.active {
                         a{
                             color: #ffffff;
-                            font: 600 16px PFBeauSansPro;
+                            font: 700 16px PFBeauSansPro;
                             background: $blue;
                             padding: 24px 24px;
                         }
@@ -57,9 +57,8 @@
         text-align: right;
         &--number{
             @include make-row();
-            margin-bottom: 7px;
             color: #000000;
-            font: 600 30px PFBeauSansPro;
+            font: 700 30px PFBeauSansPro;
         }
         &--label{
             @include make-row();
