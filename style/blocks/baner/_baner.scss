@@ -1,5 +1,151 @@
+::-webkit-input-placeholder {color:#000000;}
+::-moz-placeholder          {color:#000000;}/* Firefox 19+ */
+:-moz-placeholder           {color:#000000;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#000000;}
+.bg__black{
+    background-color: rgba(0,0,0,.8);
+}
+.arrow-down{
+    margin-bottom: 39px;
+}
 .baner{
-    @include make-row();
     height: 660px;
+    padding-bottom: 25px;
     background: url(/images/background-1.png);
+    
+    &__left{
+        @include make-xs-column(9);
+        .good__price{
+            margin-top: 67px;
+            @include make-xs-column(9);
+            &--harry{
+                color: #ffffff;
+                font: 300 48px PFBeauSansPro;
+            }
+            &--where{
+                color: #ffffff;
+                font: 900 60px / 61px PFBeauSansPro;
+                text-transform: uppercase
+            }
+            &--much{
+                color: #7ed9ff;
+                font: 300 57px / 52px PFBeauSansPro;    
+            }
+        }
+        .arrow{
+            @include make-xs-column(3);
+            margin-top: 67px;
+
+            
+        }
+        
+        .good__black{
+            @include make-xs-column(9);
+            color: #ffffff;
+            padding-left: 35px;
+            padding-top: 19px;
+            padding-bottom: 19px;
+            font: 700 30px PFBeauSansPro;
+        }
+        .enes__image {
+            @include make-xs-column(3);
+            padding-top: 17px;
+            padding-right: 22px;
+            float:right;
+            img{
+                float: right;
+            }
+        }
+        .good__list{
+            margin-top: 31px;
+            @include make-xs-column(6);
+            
+            ul{
+                list-style-image: url(/images/listicon.png);
+                    
+                li{
+                    color: #ffffff;
+                    font: 500 20px / 36px HelveticaNeueCyr;
+                }
+            }
+
+        }
+    }
+    &__right{
+        @include make-xs-column(2.7);
+        margin-left: 30px;
+        box-shadow: 3px 4px 5px 0.00px rgba(0, 0, 0, 0.56);
+        border-radius: 1px;
+        margin-top: 155px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: #fff;
+        .baner__form--header{
+            color: #000000;
+            
+            padding-top: 32px;
+            text-align: center;
+            font: 700 24px PFBeauSansPro;
+            span{
+                color: #000000;
+                font: 700 27px PFBeauSansPro;
+            }
+        }
+        .baner__form--sub{
+            
+            color: #7d7d7d;
+            text-align: center;
+            font: italic 300 16px HelveticaNeueCyr;
+        }
+        .baner__form--free{
+            margin-top: 27px;
+            color: #010101;
+            font: 300 16px HelveticaNeueCyr;
+            text-align: center;
+            span{
+                font: 700 16px HelveticaNeueCyr;
+                color: #4eadd5;
+            }
+        }
+        .baner__form--input{
+            height: 40px;
+            color: #000000;
+            font: 300 16px HelveticaNeueCyr;
+            width: 100%;
+            border-radius: 1px;
+            border: 1px solid #555;
+            position: relative;
+            margin-top: 10px;
+
+            .name{
+                display: block;
+                top:0;
+                border: none;
+                background: none;
+                height: 40px;
+                &:focus,&:active{
+                    outline: none;
+                }
+            }
+            .baner__form--icon{
+                padding: 7px;
+                float: left
+            }
+                
+            
+        }
+        .baner__form--submit{
+            background-color: #d86654;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            color: #ffffff;
+            font: 700 18px HelveticaNeueCyr;
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 36px;
+        }
+    }
+    
 }
