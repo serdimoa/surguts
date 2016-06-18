@@ -16,15 +16,43 @@ function openPopup(el) { // get the class name in arguments here
 })(jQuery);
 
 $(document).ready(function () {
-    if($('.bank').length)
-        $('.bank').mouseenter(function(){
+    $('.image-popup-vertical-fit').magnificPopup({
+        type: 'image'
+        , closeOnContentClick: true
+        , mainClass: 'mfp-img-mobile'
+        , image: {
+            verticalFit: true
+        }
+
+    });
+    $('.photogalery').magnificPopup({
+        delegate: 'a'
+        , type: 'image'
+        , tLoading: 'Loading image #%curr%...'
+        , mainClass: 'mfp-img-mobile'
+        , gallery: {
+            enabled: true
+            , navigateByImgClick: true
+            , preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        }
+        , image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+            , titleSrc: function (item) {
+                return item.el.attr('title') + '';
+            }
+        }
+    });
+
+
+    if ($('.bank').length)
+        $('.bank').mouseenter(function () {
             $(this).find(".toanim").slideUp();
-        }).mouseleave(function(){
+        }).mouseleave(function () {
             $(this).find(".toanim").slideDown();
         });
-        
-    if($('.toManager').length)
-        $('.toManager').click(function(e){
+
+    if ($('.toManager').length)
+        $('.toManager').click(function (e) {
             e.preventDefault();
             $('#baner').goTo()
 
